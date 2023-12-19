@@ -1,0 +1,235 @@
+.sideBarContent {
+  min-height: 100vh;
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .backdrop-img {
+    width: 100%;
+    height: 89%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+    overflow: hidden;
+
+    .lazy-load-image-background {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  .opacity-layer {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(4, 21, 45, 0) 0%, #04152dc4 79.17%);
+    position: absolute;
+    top: 80px;
+    left: 0;
+  }
+
+  .content {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 40px;
+    margin-left: 30px;
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (max-width: 600px) {
+      gap: 50px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-left: 0px;
+    }
+    .left {
+      flex-shrink: 0;
+
+      .posterImg {
+        width: 20vh;
+        display: flex;
+        border-radius: 12px;
+        @media only screen and (max-width: 600px) {
+          max-width: 200px;
+          margin: 0;
+        }
+      }
+    }
+
+    .right {
+      color: white;
+
+      .title {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: bold;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 34px;
+          line-height: 44px;
+          margin: 0;
+        }
+      }
+      .subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        font-style: italic;
+        opacity: 0.5;
+
+        @media only screen and (max-width: 600px) {
+        //   font-size: 0;
+          line-height: 28px;
+          margin: 0;
+        }
+      }
+
+      .overview {
+        margin-bottom: 25px;
+        @media only screen and (max-width: 600px) {
+        //   font-size: 0;
+          padding: 0;
+          margin-bottom: 20px;
+        }
+
+        .heading {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .description {
+          line-height: 24px;
+
+          @media only screen and (max-width: 600px) {
+            padding-right: 20px;
+            padding-left: 20px;
+          }
+        }
+      }
+      .row {
+        display: block;
+        // flex-direction: row;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 25px;
+      }
+
+      .info {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 600px) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          padding: 0;
+          margin: 0;
+        }
+
+        .infoItem {
+          margin-right: 10px;
+          //   display: flex;
+          flex-flow: row wrap;
+        }
+
+        .text {
+          margin-right: 10px;
+          opacity: 0.5;
+          line-height: 24px;
+
+          &.bold {
+            font-weight: 600;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .castSection {
+    position: relative;
+    margin: 0 30px;
+    // margin-bottom: 50px;
+
+    .sectionHeading {
+      font-size: 24px;
+      color: white;
+    //   margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .listItems {
+      display: flex;
+      gap: 20px;
+      overflow-y: hidden;
+      margin-right: -20px;
+      margin-left: -20px;
+      padding: 0 20px;
+
+      @media only screen and (min-width: 600px) {
+        margin: 0;
+        padding: 0;
+      }
+
+      .listItem {
+        text-align: center;
+        color: white;
+
+        .profileImg {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-bottom: 15px;
+
+          @media only screen and (min-width: 600px) {
+            width: 125px;
+            height: 125px;
+            margin-bottom: 25px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+          }
+        }
+
+        .name {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 600;
+
+          @media only screen and (min-width: 600px) {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+
+        .character {
+          font-size: 14px;
+          line-height: 20px;
+          opacity: 0.5;
+
+          @media only screen and (min-width: 600px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
